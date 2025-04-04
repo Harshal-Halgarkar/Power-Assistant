@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <title>Power Grid Assistant</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <link rel="icon" href="data:;base64,=">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js"></script>
+</head>
+<body>
+  <header class="header">
+    <h1>⚡ Power Grid Assistant</h1>
+  </header>
+  <div class="chat-container">
+    <div class="history-panel">
+      <h3>History</h3>
+      <ul id="history-list"></ul>
+    </div>
+    <div class="chat-section">
+      <div class="chat-box" id="chat-box">
+        <div class="bot-message">
+          <p>Hello! How can I assist you today regarding Power Grid Ltd?</p>
+        </div>
+      </div>
+      <div class="input-container">
+        <textarea id="message-input" placeholder="Type your message..."></textarea>
+        <button id="sendBtn"><i class="fas fa-paper-plane"></i></button>
+        <button id="voiceBtn"><i class="fas fa-microphone"></i></button>
+      </div>    
+    </div>
+  </div>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
