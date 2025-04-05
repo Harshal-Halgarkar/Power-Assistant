@@ -3,89 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PowerGrid AI Assistant</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <title>Power Grid Assistant</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
   <link rel="icon" href="data:;base64,=">
-  <script src="C:\Users\sahil\OneDrive\Documents\deepank\Power Assistant\script.js"></script>
-  <style>
-    body {
-      background-color: #121212;
-      color: #ffffff;
-      font-family: Arial, sans-serif;
-    }
-    .header {
-      background-color: #1f1f1f;
-      padding: 15px;
-      text-align: center;
-    }
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-    }
-    .nav-links a {
-      color: #ffcc00;
-      text-decoration: none;
-      margin: 0 10px;
-    }
-    .hero {
-      text-align: center;
-      padding: 200px; /* 4 times the original 50px */
-      background-color: #222;
-    }
-    .start-chat {
-      background-color: #ffcc00;
-      color: #121212;
-      border: none;
-      padding: 10px 20px;
-      cursor: pointer;
-    }
-    .chat-container {
-      display: flex;
-      padding: 20px;
-      background-color: #1a1a1a;
-      border-radius: 10px;
-      margin: 20px;
-    }
-    .chat-box {
-      background-color: #333;
-      padding: 15px;
-      border-radius: 10px;
-    }
-    .input-container textarea {
-      background-color: #222;
-      color: #fff;
-      border: 1px solid #ffcc00;
-    }
-    .footer {
-      text-align: center;
-      padding: 10px;
-      background-color: #1f1f1f;
-    }
-  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js"></script>
 </head>
 <body>
   <header class="header">
-    <nav class="navbar">
-      <h1>⚡ PowerGrid AI Assistant</h1>
-      <ul class="nav-links">
-        <li><a href="#features">Features</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <h1>⚡ Power Grid Assistant</h1>
   </header>
-  
-  <section class="hero">
-    <h2>Smart Assistance for PowerGrid Ltd</h2>
-    <p>Interact with our AI-powered chatbot to get insights and assistance regarding Power Grid Ltd.</p>
-    <button class="start-chat">Start Chat</button>
-  </section>
-  
   <div class="chat-container">
     <div class="history-panel">
-      <h3>Chat History</h3>
+      <h3>History</h3>
       <ul id="history-list"></ul>
     </div>
     <div class="chat-section">
@@ -95,17 +25,12 @@
         </div>
       </div>
       <div class="input-container">
-        <textarea id="user-input" placeholder="Type your query..."></textarea>
-        <button id="send-btn">Send</button>
-        <button id="voice-btn">🎤</button>
-      </div>
+        <textarea id="message-input" placeholder="Type your message..."></textarea>
+        <button id="sendBtn"><i class="fas fa-paper-plane"></i></button>
+        <button id="voiceBtn"><i class="fas fa-microphone"></i></button>
+      </div>    
     </div>
   </div>
-  
-  <footer class="footer">
-    <p>&copy; 2025 PowerGrid AI Assistant. All rights reserved.</p>
-  </footer>
-  
-  <script src="script.js"></script>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
